@@ -1,0 +1,20 @@
+:root {
+    --v-dark-blue: hsl(233, 47%, 7%);
+    --dark-des-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --white-main: hsla(0, 0%, 100%, 0.75);
+    --white-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-size: 1.5rem;
+}

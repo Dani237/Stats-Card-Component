@@ -1,7 +1,7 @@
 :root {
     --v-dark-blue: hsl(233, 47%, 7%);
     --dark-des-blue: hsl(244, 38%, 16%);
-    --soft-violet: hsl(277, 64%, 61%);
+    --soft-violet: rgb(170, 92, 219);
 
     --white: hsl(0, 0%, 100%);
     --white-main: hsla(0, 0%, 100%, 0.75);
@@ -13,8 +13,138 @@ html {
     font-size: 62.5%;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 body {
+    background-color: var(--v-dark-blue);
     font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 108rem;
+    margin: 0 auto;
+}
+
+/* CARD */
+
+.card {
+    background-color: var(--dark-des-blue);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1rem;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* INFO */
+
+.info {
+    width: 68%;
+}
+.info-title {
+    font-size: 3.3rem;
+    line-height: 1.3;
+}
+span {
+    color: var(--soft-violet);
+}
+.info-text {
+    font-size: 1.5rem;
+    color: var(--white-stats);
+    padding-right: 2.46rem;
+}
+
+/* STATS */
+
+.stats {
+    width: 68%;
+    display: flex;
+    gap: 5rem;
+}
+.stats-title {
+    font-size: 2.3rem;
+}
+.stats-title,
+.stats-desc {
+    margin: 0;
+}
+.stats-desc {
+    color: var(--white-stats);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.4rem;
+}
+
+/* IMAGEN */
+
+.image {
+    width: 100%;
+}
+.overlay {
+    position: fixed;
+    background: rgba(121, 7, 194, .5);
+    width: 54rem;
+    height: 44.6rem;
+}
+.background {
+    background-image: url(../images/image-header-desktop.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 44.6rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 37.5rem) {
+    body {
+        padding: 0 2rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .background {
+        background-image: url(../images/image-header-mobile.jpg);
+        border-top-left-radius: 1rem;
+        height: 24.5rem;
+    }
+    .overlay {
+        width: 33.5rem;
+        height: 24.5rem;
+    }
+    .main-content {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .info {
+        width: 80%;
+    }
+    .info-title {
+        font-size: 2.6rem;
+    }
+    .info-text {
+        padding: 0 .45rem;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
